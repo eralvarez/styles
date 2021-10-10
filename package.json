@@ -1,7 +1,7 @@
 {
   "name": "@ealvarez/ui",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "start:dev": "next dev",
     "build": "sass styles.scss styles.css --style compressed",
