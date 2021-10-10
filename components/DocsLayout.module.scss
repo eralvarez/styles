@@ -1,0 +1,11 @@
+@import "../styles/variables.scss";
+@import "../styles/breakpoints.scss";
+
+.sidebar {
+  @include screenSize(mobile) {
+    display: none;
+  }
+  @include screenSize(tablet) {
+    display: block;
+  }
+}

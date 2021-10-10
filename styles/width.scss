@@ -1,0 +1,9 @@
+$width_percentages: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+.#{$ui_class-prefix}width {
+  @each $width_percentage in $width_percentages {
+    &-#{$width_percentage} {
+      width: calc(#{$width_percentage} * 1%);
+    }
+  }
+}

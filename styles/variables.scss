@@ -1,0 +1,35 @@
+// General
+$ui_class-prefix: "" !default;
+
+// Fonts
+$ui_font-family: Segoe UI !default;
+$ui_font-light: 100 !default;
+$ui_font-normal: 400 !default;
+$ui_font-bold: 700 !default;
+
+// Border radius
+$ui_border-radius: 4px !default;
+
+// Breakpoints
+$ui_breakpoint-mobile: 425px !default;
+$ui_breakpoint-tablet: 768px !default;
+$ui_breakpoint-desktop: 1024px !default;
+
+// Colors
+$ui_color-primary: rgb(19, 102, 245) !default;
+$ui_color-secondary: rgb(97, 106, 113) !default;
+$ui_color-success: rgb(29, 124, 77) !default;
+$ui_color-danger: rgb(213, 44, 64) !default;
+$ui_color-warning: rgb(254, 183, 51) !default;
+$ui_color-light: rgb(247, 248, 249) !default;
+$ui_color-dark: rgb(30, 33, 36) !default;
+
+// Buttons
+$ui_button-border-radius: $ui_border-radius !default;
+$ui_button-primary-font-color: $ui_color-light !default;
+$ui_button-secondary-font-color: $ui_color-light !default;
+$ui_button-success-font-color: $ui_color-light !default;
+$ui_button-danger-font-color: $ui_color-light !default;
+$ui_button-warning-font-color: $ui_color-dark !default;
+$ui_button-light-font-color: $ui_color-dark !default;
+$ui_button-dark-font-color: $ui_color-light !default;

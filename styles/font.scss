@@ -1,0 +1,39 @@
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+$font-sizes: 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $ui_font-family, sans-serif;
+  font-weight: $ui_font-normal;
+}
+
+.#{$ui_class-prefix}font {
+  &-light {
+    font-weight: $ui_font-light;
+  }
+
+  &-normal {
+    font-weight: $ui_font-normal;
+  }
+
+  &-bold {
+    font-weight: $ui_font-bold;
+  }
+
+  &-weight,
+  &-w {
+    @each $font-weight in $font-weights {
+      &-#{$font-weight} {
+        font-weight: #{$font-weight};
+      }
+    }
+  }
+
+  @each $font-size in $font-sizes {
+    &-#{$font-size} {
+      font-size: #{$font-size}px;
+    }
+  }
+}

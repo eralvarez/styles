@@ -1,0 +1,78 @@
+@use "sass:color";
+
+$colors: (
+  "primary": $ui_color-primary,
+  "secondary": $ui_color-secondary,
+  "success": $ui_color-success,
+  "danger": $ui_color-danger,
+  "warning": $ui_color-warning,
+  "light": $ui_color-light,
+  "dark": $ui_color-dark,
+);
+$buttonSizes: "sm", "md", "lg";
+
+.#{$ui_class-prefix}button,
+.#{$ui_class-prefix}btn {
+  border: 0px;
+  border-radius: $ui_button-border-radius;
+
+  // Default is primary
+  background-color: $ui_color-primary;
+  color: $ui_button-primary-font-color;
+  &:hover {
+    cursor: pointer;
+    background-color: color.scale($ui_color-primary, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.scale($ui_color-primary, $lightness: 10%);
+  }
+
+  // Default size (md)
+  padding: 8px 16px;
+  font-size: 16px;
+
+  @each $buttonSize in $buttonSizes {
+    &-#{$buttonSize} {
+      @if $buttonSize == "sm" {
+        padding: 4px 12px;
+        font-size: 14px;
+      } @else if $buttonSize == "md" {
+        padding: 8px 16px;
+        font-size: 16px;
+      } @else if $buttonSize == "lg" {
+        padding: 12px 18px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @each $colorKey, $colorValue in $colors {
+    &-#{$colorKey} {
+      background-color: $colorValue;
+      &:hover {
+        cursor: pointer;
+        background-color: color.scale($colorValue, $lightness: -10%);
+      }
+
+      &:active {
+        background-color: color.scale($colorValue, $lightness: 10%);
+      }
+
+      @if $colorKey == "primary" {
+        color: $ui_button-primary-font-color;
+      } @else if $colorKey == "secondary" {
+        color: $ui_button-secondary-font-color;
+      } @else if $colorKey == "success" {
+        color: $ui_button-success-font-color;
+      } @else if $colorKey == "danger" {
+        color: $ui_button-danger-font-color;
+      } @else if $colorKey == "warning" {
+        color: $ui_button-warning-font-color;
+      } @else if $colorKey == "light" {
+        color: $ui_button-light-font-color;
+      } @else if $colorKey == "dark" {
+        color: $ui_button-dark-font-color;
+      }
+    }
+  }
+}

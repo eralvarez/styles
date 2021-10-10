@@ -1,0 +1,9 @@
+$height_percentages: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+.#{$ui_class-prefix}height {
+  @each $height_percentage in $height_percentages {
+    &-#{$height_percentage} {
+      height: calc(#{$height_percentage} * 1%);
+    }
+  }
+}
