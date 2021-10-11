@@ -1,6 +1,19 @@
 $height_percentages: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+$heightSizesIndexes: 0, 1, 2, 3, 4, 5, 6;
+$heightSizes: 0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95;
 
 .#{$ui_class-prefix}height {
+  @each $heightSizesIndex in $heightSizesIndexes {
+    @each $heightSize in $heightSizes {
+      $heightClassName: ($heightSizesIndex * 100) + $heightSize;
+
+      &-#{$heightClassName}px {
+        height: calc(#{$heightClassName} * 1px);
+        max-height: calc(#{$heightClassName} * 1px);
+      }
+    }
+  }
+
   @each $height_percentage in $height_percentages {
     &-#{$height_percentage} {
       height: calc(#{$height_percentage} * 1%);

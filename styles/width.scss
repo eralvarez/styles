@@ -1,6 +1,19 @@
 $width_percentages: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+$widthSizesIndexes: 0, 1, 2, 3, 4, 5, 6;
+$widthSizes: 0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95;
 
 .#{$ui_class-prefix}width {
+  @each $widthSizesIndex in $widthSizesIndexes {
+    @each $widthSize in $widthSizes {
+      $widthClassName: ($widthSizesIndex * 100) + $widthSize;
+
+      &-#{$widthClassName}px {
+        width: calc(#{$widthClassName} * 1px);
+        max-width: calc(#{$widthClassName} * 1px);
+      }
+    }
+  }
+
   @each $width_percentage in $width_percentages {
     &-#{$width_percentage} {
       width: calc(#{$width_percentage} * 1%);

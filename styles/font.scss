@@ -1,5 +1,6 @@
 $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 $font-sizes: 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52;
+$textAligns: left, right, center, justify, initial;
 
 html,
 body {
@@ -7,6 +8,14 @@ body {
   margin: 0;
   font-family: $ui_font-family, sans-serif;
   font-weight: $ui_font-normal;
+}
+
+.#{$ui_class-prefix}text {
+  @each $textAlign in $textAligns {
+    &-align-#{$textAlign} {
+      text-align: $textAlign;
+    }
+  }
 }
 
 .#{$ui_class-prefix}font {

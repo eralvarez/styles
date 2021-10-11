@@ -27,6 +27,24 @@ $buttonSizes: "sm", "md", "lg";
     background-color: color.scale($ui_color-primary, $lightness: 10%);
   }
 
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-width: 0px;
+  }
+
+  &-link {
+    background-color: $ui_color-light;
+    color: $ui_color-dark;
+    &:hover {
+      text-decoration: underline;
+      background-color: unset;
+    }
+    &:active {
+      background-color: color.scale($ui_color-light, $lightness: -10%);
+    }
+  }
+
   // Default size (md)
   padding: 8px 16px;
   font-size: 16px;
