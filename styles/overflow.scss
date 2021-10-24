@@ -1,0 +1,17 @@
+$overflowOptions: visible, hidden, scroll, auto;
+
+.#{$ui_class-prefix}overflow {
+  @each $overflowOption in $overflowOptions {
+    &-#{$overflowOption} {
+      overflow: $overflowOption;
+    }
+
+    &-x-#{$overflowOption} {
+      overflow-x: $overflowOption;
+    }
+
+    &-y-#{$overflowOption} {
+      overflow-y: $overflowOption;
+    }
+  }
+}

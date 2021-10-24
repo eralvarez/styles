@@ -1,5 +1,6 @@
 @import "normalize.css";
 
+// Helpers
 @import "./styles/breakpoints.scss";
 @import "./styles/variables.scss";
 @import "./styles/colors.scss";
@@ -10,8 +11,13 @@
 @import "./styles/margin-padding.scss";
 @import "./styles/display.scss";
 @import "./styles/column.scss";
+@import "./styles/elevation.scss";
+@import "./styles/cursor.scss";
+@import "./styles/overflow.scss";
+@import "./styles/container.scss";
+
+// Elements
 @import "./styles/table.scss";
 @import "./styles/buttons.scss";
 @import "./styles/input.scss";
-@import "./styles/elevation.scss";
 @import "./styles/nav.scss";

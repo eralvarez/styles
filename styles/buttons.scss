@@ -36,6 +36,7 @@ $buttonSizes: "sm", "md", "lg";
   &-link {
     background-color: $ui_color-light;
     color: $ui_color-dark;
+    text-decoration: none;
     &:hover {
       text-decoration: underline;
       background-color: unset;
