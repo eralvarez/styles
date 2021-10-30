@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ztyle
 
-## Getting Started
+[![npm version](https://badge.fury.io/js/ztyle.svg)](https://badge.fury.io/js/ztyle)
 
-First, run the development server:
+Bunch of CSS classes and react components (coming soon).
 
-```bash
-npm run dev
-# or
-yarn dev
+`Ztyle` is not intended to be a small css library, the main goal the team follows is to have all minimum needed classes to build a project with almost no extra `CSS`.
+
+The minified compiled output is a `~1mb` file. Loading the full `styles.css` can result in a very bad practice to your project. You should **ALWAYS** use a treeshake-css tool.
+
+<!-- MD_DOCS:START -->
+## Docs
+
+- [Fonts](./docs/fonts.md)
+
+<!-- MD_DOCS:END -->
+
+## Installation
+
+Install `ztyle` with your favorite package manager.
+
+```shell
+# with npm
+> npm install ztyle --save
+
+# with yarn
+> yarn add ztyle
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Load `ztyle/styles.scss` in your main SASS file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```css
+@import "ztyle/styles.scss";
+```

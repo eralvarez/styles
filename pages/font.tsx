@@ -1,23 +1,19 @@
-import React from 'react';
-import Markdown from 'markdown-to-jsx';
+import React, { useEffect } from 'react';
 
-// import markdownConfig from "../constants/markdown.config";
+import Markdown from "../components/docs/Markdown";
 import DocsLayout from "../components/docs/DocsLayout";
+import FONTS_DOC from "../docs/fonts.md";
 
 const FontPage = () => {
-
-  const markdownText = `
-  # Fonts
-  | data | value |
-| --- | --- |
-| 1 | 1 |
-  `;
+  useEffect(() => {
+    console.log(FONTS_DOC);
+  }, []);
 
   return (
     <DocsLayout>
-      {/* <Markdown options={markdownConfig}> */}
-        {/* {markdownText} */}
-      {/* </Markdown> */}
+      <Markdown>
+        {FONTS_DOC}
+      </Markdown>
     </DocsLayout>
   );
 }
