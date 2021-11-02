@@ -1,0 +1,31 @@
+@use "sass:color";
+@import "../helpers/color-scheme-and-device.scss";
+
+$selectors: "table";
+@include colorSchemeAndDevice($selectors) {
+  width: 100%;
+  border-collapse: collapse;
+
+  &-striped {
+    tbody {
+      tr:nth-of-type(odd) {
+        background-color: darken(white, 6%);
+      }
+    }
+  }
+
+  thead {
+    border-bottom: 2px solid $ui_colorDark;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid lighten($ui_colorDark, 70%);
+    }
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}

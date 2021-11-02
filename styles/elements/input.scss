@@ -1,0 +1,26 @@
+input[type="date"].#{$ui_classPrefix}input,
+input[type="datetime-local"].#{$ui_classPrefix}input,
+input[type="email"].#{$ui_classPrefix}input,
+input[type="month"].#{$ui_classPrefix}input,
+input[type="number"].#{$ui_classPrefix}input,
+input[type="password"].#{$ui_classPrefix}input,
+input[type="tel"].#{$ui_classPrefix}input,
+input[type="text"].#{$ui_classPrefix}input,
+input[type="time"].#{$ui_classPrefix}input,
+input[type="url"].#{$ui_classPrefix}input,
+input[type="week"].#{$ui_classPrefix}input {
+  width: 100%;
+  padding: 8px 10px 6px 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="range"].#{$ui_classPrefix}input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"].#{$ui_classPrefix}input,
+input[type="radio"].#{$ui_classPrefix}input {
+  transform: scale(1.4);
+}

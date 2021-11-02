@@ -1,0 +1,20 @@
+@import "../helpers/color-scheme-and-device.scss";
+
+$textAligns: left, right, center, justify, initial;
+$textTransforms: capitalize, uppercase, lowercase;
+
+$selectors: "text", "t";
+@include colorSchemeAndDevice($selectors) {
+  @each $textAlign in $textAligns {
+    &-align-#{$textAlign},
+    &-a-#{$textAlign} {
+      text-align: $textAlign;
+    }
+  }
+
+  @each $textTransform in $textTransforms {
+    &-#{$textTransform} {
+      text-transform: $textTransform;
+    }
+  }
+}

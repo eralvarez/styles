@@ -1,0 +1,48 @@
+@import "../helpers/breakpoints.scss";
+@import "../helpers/color-scheme-and-device.scss";
+
+$selectors: "column", "col";
+@include colorSchemeAndDevice($selectors) {
+  overflow: auto;
+
+  @for $columnSize from 1 through 12 {
+    &-#{$columnSize} {
+      overflow: auto;
+      width: calc(calc(#{$columnSize}/ 12) * 100%);
+    }
+  }
+
+  &-sm {
+    @for $columnSize from 1 through 12 {
+      &-#{$columnSize} {
+        overflow: auto;
+        width: 100%;
+        @include screenSize(mobile) {
+          width: calc(calc(#{$columnSize}/ 12) * 100%);
+        }
+      }
+    }
+  }
+  &-md {
+    @for $columnSize from 1 through 12 {
+      &-#{$columnSize} {
+        overflow: auto;
+        width: 100%;
+        @include screenSize(tabletAndDesktop) {
+          width: calc(calc(#{$columnSize}/ 12) * 100%);
+        }
+      }
+    }
+  }
+  &-lg {
+    @for $columnSize from 1 through 12 {
+      &-#{$columnSize} {
+        overflow: auto;
+        width: 100%;
+        @include screenSize(desktop) {
+          width: calc(calc(#{$columnSize}/ 12) * 100%);
+        }
+      }
+    }
+  }
+}

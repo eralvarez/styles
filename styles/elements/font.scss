@@ -1,0 +1,44 @@
+@import "../helpers/color-scheme-and-device.scss";
+
+$fontWeights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $ui_fontFamily, sans-serif;
+  font-weight: $ui_fontNormal;
+}
+
+$selectors: "font", "f";
+@include colorSchemeAndDevice($selectors) {
+  &-light,
+  &-l {
+    font-weight: $ui_fontLight;
+  }
+
+  &-normal,
+  &-n {
+    font-weight: $ui_fontNormal;
+  }
+
+  &-bold,
+  &-b {
+    font-weight: $ui_fontBold;
+  }
+
+  &-weight,
+  &-w {
+    @each $fontWeight in $fontWeights {
+      &-#{$fontWeight} {
+        font-weight: #{$fontWeight};
+      }
+    }
+  }
+
+  @for $fontSize from 0 through 100 {
+    &-#{$fontSize} {
+      font-size: #{$fontSize}px;
+    }
+  }
+}

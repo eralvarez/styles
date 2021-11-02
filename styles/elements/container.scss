@@ -1,0 +1,21 @@
+@import "../helpers/breakpoints.scss";
+@import "../helpers/color-scheme-and-device.scss";
+
+$selectors: "container";
+@include colorSchemeAndDevice($selectors) {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+
+  &-boxed {
+    overflow: auto;
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include screenSize(upToDesktop) {
+      width: 100%;
+      margin: unset;
+    }
+  }
+}

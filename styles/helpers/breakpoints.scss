@@ -1,0 +1,27 @@
+@mixin screenSize($size) {
+  @if $size == mobile {
+    @media (max-width: $ui_breakpointMobile) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: calc(#{$ui_breakpointMobile} + 1px)) and (max-width: $ui_breakpointTablet) {
+      @content;
+    }
+  } @else if $size == upToTablet {
+    @media (max-width: $ui_breakpointTablet) {
+      @content;
+    }
+  } @else if $size == upToDesktop {
+    @media (max-width: $ui_breakpointDesktop) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: calc(#{$ui_breakpointTablet} + 1px)) {
+      @content;
+    }
+  } @else if $size == tabletAndDesktop {
+    @media (min-width: calc(#{$ui_breakpointMobile} + 1px)) {
+      @content;
+    }
+  }
+}

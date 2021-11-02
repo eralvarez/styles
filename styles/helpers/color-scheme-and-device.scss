@@ -1,0 +1,56 @@
+@import "./breakpoints.scss";
+
+// color schemas available:
+// - light
+// - dark
+// devices available:
+// - mobile
+// - tablet
+// - desktop
+@mixin colorSchemeAndDevice($childSelectors) {
+  @each $colorSchema in $ui_colorSchemas {
+    @each $childSelector in $childSelectors {
+      @if $colorSchema == "light" {
+        @media screen and (prefers-color-scheme: light) {
+          .#{$ui_classPrefix}#{$colorSchema}\:#{$childSelector} {
+            @content;
+          }
+        }
+      } @else if $colorSchema == "dark" {
+        @media screen and (prefers-color-scheme: dark) {
+          .#{$ui_classPrefix}#{$colorSchema}\:#{$childSelector} {
+            @content;
+          }
+        }
+      } @else {
+        .#{$ui_classPrefix}#{$childSelector} {
+          @content;
+        }
+      }
+    }
+  }
+
+  @each $device in $ui_devices {
+    @each $childSelector in $childSelectors {
+      @if $device == "mobile" {
+        @include screenSize($device) {
+          .#{$ui_classPrefix}#{$device}\:#{$childSelector} {
+            @content;
+          }
+        }
+      } @else if $device == "tablet" {
+        @include screenSize($device) {
+          .#{$ui_classPrefix}#{$device}\:#{$childSelector} {
+            @content;
+          }
+        }
+      } @else if $device == "desktop" {
+        @include screenSize($device) {
+          .#{$ui_classPrefix}#{$device}\:#{$childSelector} {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@use "sass:color";
+@import "../helpers/color-scheme-and-device.scss";
+
+$colors: (
+  "primary": $ui_colorPrimary,
+  "secondary": $ui_colorSecondary,
+  "success": $ui_colorSuccess,
+  "danger": $ui_colorDanger,
+  "warning": $ui_colorWarning,
+  "light": $ui_colorLight,
+  "dark": $ui_colorDark,
+);
+$buttonSizes: "sm", "md", "lg";
+
+$selectors: "button", "btn";
+@include colorSchemeAndDevice($selectors) {
+  border: 0px;
+  border-radius: $ui_buttonBorderRadius;
+
+  // Default is primary
+  background-color: $ui_colorPrimary;
+  color: $ui_buttonPrimaryFontColor;
+  &:hover {
+    cursor: pointer;
+    background-color: color.scale($ui_colorPrimary, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.scale($ui_colorPrimary, $lightness: 10%);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-width: 0px;
+  }
+
+  &-link {
+    background-color: $ui_colorLight;
+    color: $ui_colorDark;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      background-color: unset;
+    }
+    &:active {
+      background-color: color.scale($ui_colorLight, $lightness: -10%);
+    }
+  }
+
+  // Default size (md)
+  padding: 8px 16px;
+  font-size: 16px;
+
+  @each $buttonSize in $buttonSizes {
+    &-#{$buttonSize} {
+      @if $buttonSize == "sm" {
+        padding: 4px 12px;
+        font-size: 14px;
+      } @else if $buttonSize == "md" {
+        padding: 8px 16px;
+        font-size: 16px;
+      } @else if $buttonSize == "lg" {
+        padding: 12px 18px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @each $colorKey, $colorValue in $colors {
+    &-#{$colorKey} {
+      background-color: $colorValue;
+      &:hover {
+        cursor: pointer;
+        background-color: color.scale($colorValue, $lightness: -10%);
+      }
+
+      &:active {
+        background-color: color.scale($colorValue, $lightness: 10%);
+      }
+
+      @if $colorKey == "primary" {
+        color: $ui_buttonPrimaryFontColor;
+      } @else if $colorKey == "secondary" {
+        color: $ui_buttonSecondaryFontColor;
+      } @else if $colorKey == "success" {
+        color: $ui_buttonSuccessFontColor;
+      } @else if $colorKey == "danger" {
+        color: $ui_buttonDangerFontColor;
+      } @else if $colorKey == "warning" {
+        color: $ui_buttonWarningFontColor;
+      } @else if $colorKey == "light" {
+        color: $ui_buttonLightFontColor;
+      } @else if $colorKey == "dark" {
+        color: $ui_buttonDarkFontColor;
+      }
+    }
+  }
+}
+// .#{$ui_classPrefix}button,
+// .#{$ui_classPrefix}btn {
+// }

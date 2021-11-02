@@ -1,0 +1,78 @@
+@import "../helpers/color-scheme-and-device.scss";
+
+$borderSizeList: (
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px,
+  "6": 6px,
+  "7": 7px,
+  "8": 8px,
+  "9": 9px,
+  "10": 10px,
+  "11": 11px,
+  "12": 12px,
+  "13": 13px,
+  "14": 14px,
+  "15": 15px,
+  "16": 16px,
+  "17": 17px,
+  "18": 18px,
+  "19": 19px,
+  "20": 20px,
+);
+$borderSides: top, right, bottom, left;
+$colors: (
+  "primary": $ui_colorPrimary,
+  "secondary": $ui_colorSecondary,
+  "success": $ui_colorSuccess,
+  "danger": $ui_colorDanger,
+  "warning": $ui_colorWarning,
+  "light": $ui_colorLight,
+  "dark": $ui_colorDark,
+);
+
+// @each $schema in $ui_colorSchemas {
+$selectors: "border", "b";
+@include colorSchemeAndDevice($selectors) {
+  &-no,
+  &-0 {
+    border: unset;
+  }
+
+  @each $colorKey, $colorValue in $colors {
+    @each $borderRadiusKey, $borderSize in $borderSizeList {
+      &-#{$colorKey}-#{$borderRadiusKey} {
+        border: $borderSize solid $colorValue;
+      }
+    }
+  }
+
+  @each $borderSide in $borderSides {
+    @each $colorKey, $colorValue in $colors {
+      @each $borderRadiusKey, $borderSize in $borderSizeList {
+        &-#{$borderSide}-#{$colorKey}-#{$borderRadiusKey} {
+          border-#{$borderSide}: $borderSize solid $colorValue;
+        }
+      }
+    }
+
+    &-#{$borderSide}-no,
+    &-#{$borderSide}-0 {
+      border-#{$borderSide}: unset;
+    }
+  }
+
+  &-radius,
+  &-r {
+    border-radius: $ui_borderRadius;
+
+    @each $borderRadiusKey, $borderRadius in $borderSizeList {
+      &-#{$borderRadiusKey} {
+        border-radius: $borderRadius;
+      }
+    }
+  }
+}
+// }

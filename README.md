@@ -6,7 +6,7 @@ Bunch of CSS classes and react components (coming soon).
 
 `Ztyle` is not intended to be a small css library, the main goal the team follows is to have all minimum needed classes to build a project with almost no extra `CSS`.
 
-The minified compiled output is a `~1mb` file. Loading the full `styles.css` can result in a very bad practice to your project. You should **ALWAYS** use a treeshake-css tool.
+The minified compiled output is a `~9mb` file. Loading the full `styles.css` or `styles.min.css` can result in a very bad practice to your project. You should **ALWAYS** use a treeshake-css tool.
 
 <!-- MD_DOCS:START -->
 ## Docs
