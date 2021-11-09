@@ -10,22 +10,22 @@ The minified compiled output is a `~14mb` file. Loading the full `styles.css` or
 
 ## Docs
 
-- [Border](./docs/border.md)
-- [Button](./docs/button.md)
-- [Color](./docs/color.md)
-- [Column](./docs/column.md)
-- [Container](./docs/container.md)
-- [Cursor](./docs/cursor.md)
-- [Display](./docs/display.md)
-- [Elevation](./docs/elevation.md)
-- [Font](./docs/font.md)
-- [Height](./docs/height.md)
-- [Input](./docs/input.md)
-- [Margin & Padding](./docs/margin-padding.md)
-- [Overflow](./docs/overflow.md)
-- [Table](./docs/table.md)
-- [Text](./docs/text.md)
-- [Width](./docs/width.md)
+- [Border](./border.md)
+- [Button](./button.md)
+- [Color](./color.md)
+- [Column](./column.md)
+- [Container](./container.md)
+- [Cursor](./cursor.md)
+- [Display](./display.md)
+- [Elevation](./elevation.md)
+- [Font](./font.md)
+- [Height](./height.md)
+- [Input](./input.md)
+- [Margin & Padding](./margin-padding.md)
+- [Overflow](./overflow.md)
+- [Table](./table.md)
+- [Text](./text.md)
+- [Width](./width.md)
 
 ## Installation
 
