@@ -36,7 +36,7 @@ $selectors: "font", "f";
     }
   }
 
-  @for $fontSize from 0 through 100 {
+  @for $fontSize from $ui_fontSizeBottomLimit through $ui_fontSizeTopLimit {
     &-#{$fontSize} {
       font-size: #{$fontSize}px;
     }

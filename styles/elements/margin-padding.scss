@@ -1,6 +1,6 @@
 @import "../helpers/color-scheme-and-device.scss";
 
-$selectors: "margin";
+$selectors: "margin", "m";
 @include colorSchemeAndDevice($selectors) {
   &-no {
     margin: 0px;
@@ -16,7 +16,7 @@ $selectors: "margin";
     margin-bottom: 0px;
   }
 
-  @for $space from 0 through 1200 {
+  @for $space from $ui_marginSizeBottomLimit through $ui_marginSizeTopLimit {
     &-#{$space} {
       margin: #{$space}px;
     }
@@ -53,7 +53,7 @@ $selectors: "margin";
   }
 }
 
-$selectors: "padding";
+$selectors: "padding", "p";
 @include colorSchemeAndDevice($selectors) {
   &-no {
     padding: 0px;
@@ -69,7 +69,7 @@ $selectors: "padding";
     padding-bottom: 0px;
   }
 
-  @for $space from 0 through 1200 {
+  @for $space from $ui_paddingSizeBottomLimit through $ui_paddingSizeTopLimit {
     &-#{$space} {
       padding: #{$space}px;
     }

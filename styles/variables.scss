@@ -6,6 +6,8 @@ $ui_fontFamily: Segoe UI !default;
 $ui_fontLight: 100 !default;
 $ui_fontNormal: 400 !default;
 $ui_fontBold: 700 !default;
+$ui_fontSizeBottomLimit: 0 !default;
+$ui_fontSizeTopLimit: 64 !default;
 
 // Border radius
 $ui_borderRadius: 4px !default;
@@ -49,3 +51,24 @@ $ui_columnTopLimit: 12 !default;
 // Displays
 $ui_displayFlexGrowBottomLimit: 0 !default;
 $ui_displayFlexGrowTopLimit: 20 !default;
+
+// Height
+$ui_heightPixelBottomLimit: 0 !default;
+$ui_heightPixelTopLimit: 400 !default;
+$ui_heightPercentageBottomLimit: 0 !default;
+$ui_heightPercentageTopLimit: 100 !default;
+
+// Width
+$ui_widthPixelBottomLimit: 0 !default;
+$ui_widthPixelTopLimit: 400 !default;
+$ui_widthPercentageBottomLimit: 0 !default;
+$ui_widthPercentageTopLimit: 100 !default;
+
+// Input
+$ui_inputTransformScale: 1.4 !default;
+
+// Margin & padding
+$ui_marginSizeBottomLimit: 0 !default;
+$ui_marginSizeTopLimit: 400 !default;
+$ui_paddingSizeBottomLimit: 0 !default;
+$ui_paddingSizeTopLimit: 400 !default;

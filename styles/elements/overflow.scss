@@ -1,8 +1,8 @@
 @import "../helpers/color-scheme-and-device.scss";
 
 $overflowOptions: visible, hidden, scroll, auto;
-
 $selectors: "overflow";
+
 @include colorSchemeAndDevice($selectors) {
   @each $overflowOption in $overflowOptions {
     &-#{$overflowOption} {

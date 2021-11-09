@@ -1,19 +1,16 @@
 # Ztyle
 
-[![npm version](https://badge.fury.io/js/ztyle.svg)](https://badge.fury.io/js/ztyle)
-
-Bunch of CSS classes and react components (coming soon).
+Bunch of CSS classes.
 
 `Ztyle` is not intended to be a small css library, the main goal the team follows is to have all minimum needed classes to build a project with almost no extra `CSS`.
 
-The minified compiled output is a `~9mb` file. Loading the full `styles.css` or `styles.min.css` can result in a very bad practice to your project. You should **ALWAYS** use a treeshake-css tool.
+The minified compiled output is a `~14mb` file. Loading the full `styles.css` or `styles.min.css` can result in a very bad practice to your project. You should **ALWAYS** use a treeshake-css tool.
 
-<!-- MD_DOCS:START -->
+[![npm version](https://badge.fury.io/js/ztyle.svg)](https://badge.fury.io/js/ztyle)
+
 ## Docs
 
-- [Fonts](./docs/fonts.md)
-
-<!-- MD_DOCS:END -->
+[Documentation available here](https://github.com/eralvarez/ztyle/blob/master/docs/README.md)
 
 ## Installation
 

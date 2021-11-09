@@ -1,15 +1,16 @@
 @import "../helpers/color-scheme-and-device.scss";
 
 $selectors: "height", "h";
+
 @include colorSchemeAndDevice($selectors) {
-  @for $heightPixel from 0 through 1200 {
+  @for $heightPixel from $ui_heightPixelBottomLimit through $ui_heightPixelTopLimit {
     &-#{$heightPixel}px {
       height: calc(#{$heightPixel} * 1px);
       max-height: calc(#{$heightPixel} * 1px);
     }
   }
 
-  @for $heightPercentage from 0 through 100 {
+  @for $heightPercentage from $ui_heightPercentageBottomLimit through $ui_heightPercentageTopLimit {
     &-#{$heightPercentage} {
       height: calc(#{$heightPercentage} * 1%);
     }

@@ -47,8 +47,8 @@ $elevations: (
     0px 9px 46px 8px rgb(0 0 0 / 12%),
   ),
 );
-
 $selectors: "elevation";
+
 @include colorSchemeAndDevice($selectors) {
   @each $elevationKey, $elevationValue in $elevations {
     &-#{$elevationKey} {

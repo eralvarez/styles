@@ -22,5 +22,5 @@ input[type="range"].#{$ui_classPrefix}input {
 
 input[type="checkbox"].#{$ui_classPrefix}input,
 input[type="radio"].#{$ui_classPrefix}input {
-  transform: scale(1.4);
+  transform: scale($ui_inputTransformScale);
 }

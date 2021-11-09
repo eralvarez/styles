@@ -2,6 +2,7 @@
 @import "../helpers/color-scheme-and-device.scss";
 
 $selectors: "table";
+
 @include colorSchemeAndDevice($selectors) {
   width: 100%;
   border-collapse: collapse;

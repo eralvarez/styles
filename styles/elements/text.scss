@@ -2,8 +2,8 @@
 
 $textAligns: left, right, center, justify, initial;
 $textTransforms: capitalize, uppercase, lowercase;
-
 $selectors: "text", "t";
+
 @include colorSchemeAndDevice($selectors) {
   @each $textAlign in $textAligns {
     &-align-#{$textAlign},
