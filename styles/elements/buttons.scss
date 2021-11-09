@@ -1,18 +1,9 @@
 @use "sass:color";
 @import "../helpers/color-scheme-and-device.scss";
 
-$colors: (
-  "primary": $ui_colorPrimary,
-  "secondary": $ui_colorSecondary,
-  "success": $ui_colorSuccess,
-  "danger": $ui_colorDanger,
-  "warning": $ui_colorWarning,
-  "light": $ui_colorLight,
-  "dark": $ui_colorDark,
-);
 $buttonSizes: "sm", "md", "lg";
-
 $selectors: "button", "btn";
+
 @include colorSchemeAndDevice($selectors) {
   border: 0px;
   border-radius: $ui_buttonBorderRadius;
@@ -96,6 +87,3 @@ $selectors: "button", "btn";
     }
   }
 }
-// .#{$ui_classPrefix}button,
-// .#{$ui_classPrefix}btn {
-// }

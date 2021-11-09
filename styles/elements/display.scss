@@ -2,41 +2,41 @@
 
 $positions: static, relative, fixed, absolute, sticky;
 $displays: none, inline, block, inline-block;
-$flex-directions: row, row-reverse, column, column-reverse;
-$align-items: stretch, center, flex-start, flex-end, baseline;
-$justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly;
+$flexDirections: row, row-reverse, column, column-reverse;
+$alignItems: stretch, center, flex-start, flex-end, baseline;
+$justifyContents: flex-start, flex-end, center, space-between, space-around, space-evenly;
 
 $selectors: "flex";
 @include colorSchemeAndDevice($selectors) {
   display: flex;
 
   &-align-items {
-    @each $align-item in $align-items {
-      &-#{$align-item} {
-        align-items: $align-item;
+    @each $alignItem in $alignItems {
+      &-#{$alignItem} {
+        align-items: $alignItem;
       }
     }
   }
 
   &-justify-content {
-    @each $justify-content in $justify-contents {
-      &-#{$justify-content} {
-        justify-content: $justify-content;
+    @each $justifyContent in $justifyContents {
+      &-#{$justifyContent} {
+        justify-content: $justifyContent;
       }
     }
   }
 
   &-direction {
-    @each $direction in $flex-directions {
+    @each $direction in $flexDirections {
       &-#{$direction} {
         flex-direction: #{$direction};
       }
     }
   }
 
-  @for $flex-grow from 0 through 20 {
-    &-grow-#{$flex-grow} {
-      flex-grow: #{$flex-grow};
+  @for $flexGrow from $ui_displayFlexGrowBottomLimit through $ui_displayFlexGrowTopLimit {
+    &-grow-#{$flexGrow} {
+      flex-grow: #{$flexGrow};
     }
   }
 

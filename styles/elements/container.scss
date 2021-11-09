@@ -2,6 +2,7 @@
 @import "../helpers/color-scheme-and-device.scss";
 
 $selectors: "container";
+
 @include colorSchemeAndDevice($selectors) {
   overflow: auto;
   position: relative;

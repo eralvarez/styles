@@ -2,45 +2,46 @@
 @import "../helpers/color-scheme-and-device.scss";
 
 $selectors: "column", "col";
+
 @include colorSchemeAndDevice($selectors) {
   overflow: auto;
 
-  @for $columnSize from 1 through 12 {
+  @for $columnSize from $ui_columnBottomLimit through $ui_columnTopLimit {
     &-#{$columnSize} {
       overflow: auto;
-      width: calc(calc(#{$columnSize}/ 12) * 100%);
+      width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
     }
   }
 
   &-sm {
-    @for $columnSize from 1 through 12 {
+    @for $columnSize from $ui_columnBottomLimit through $ui_columnTopLimit {
       &-#{$columnSize} {
         overflow: auto;
         width: 100%;
         @include screenSize(mobile) {
-          width: calc(calc(#{$columnSize}/ 12) * 100%);
+          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
         }
       }
     }
   }
   &-md {
-    @for $columnSize from 1 through 12 {
+    @for $columnSize from $ui_columnBottomLimit through $ui_columnTopLimit {
       &-#{$columnSize} {
         overflow: auto;
         width: 100%;
         @include screenSize(tabletAndDesktop) {
-          width: calc(calc(#{$columnSize}/ 12) * 100%);
+          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
         }
       }
     }
   }
   &-lg {
-    @for $columnSize from 1 through 12 {
+    @for $columnSize from $ui_columnBottomLimit through $ui_columnTopLimit {
       &-#{$columnSize} {
         overflow: auto;
         width: 100%;
         @include screenSize(desktop) {
-          width: calc(calc(#{$columnSize}/ 12) * 100%);
+          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
         }
       }
     }

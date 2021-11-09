@@ -9,6 +9,10 @@ $ui_fontBold: 700 !default;
 
 // Border radius
 $ui_borderRadius: 4px !default;
+$ui_borderBottomLimit: 0 !default;
+$ui_borderTopLimit: 30 !default;
+$ui_borderRadiusBottomLimit: 0 !default;
+$ui_borderRadiusTopLimit: 20 !default;
 
 // Breakpoints
 $ui_breakpointMobile: 425px !default;
@@ -23,6 +27,10 @@ $ui_colorDanger: rgb(213, 44, 64) !default;
 $ui_colorWarning: rgb(254, 183, 51) !default;
 $ui_colorLight: rgb(247, 248, 249) !default;
 $ui_colorDark: rgb(30, 33, 36) !default;
+$ui_colorBackgroundPercentageLevelBottomLimit: -10 !default;
+$ui_colorBackgroundPercentageLevelTopLimit: 10 !default;
+$ui_colorPercentageLevelBottomLimit: -10 !default;
+$ui_colorPercentageLevelTopLimit: 10 !default;
 
 // Buttons
 $ui_buttonBorderRadius: $ui_borderRadius !default;
@@ -33,3 +41,11 @@ $ui_buttonDangerFontColor: $ui_colorLight !default;
 $ui_buttonWarningFontColor: $ui_colorDark !default;
 $ui_buttonLightFontColor: $ui_colorDark !default;
 $ui_buttonDarkFontColor: $ui_colorLight !default;
+
+// Columns
+$ui_columnBottomLimit: 1 !default;
+$ui_columnTopLimit: 12 !default;
+
+// Displays
+$ui_displayFlexGrowBottomLimit: 0 !default;
+$ui_displayFlexGrowTopLimit: 20 !default;
