@@ -9,7 +9,7 @@ $selectors: "column", "col";
   @for $columnSize from $ui_columnBottomLimit through $ui_columnTopLimit {
     &-#{$columnSize} {
       overflow: auto;
-      width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
+      width: calc(calc(#{$columnSize}/ #{$ui_columnTopLimit}) * 100%);
     }
   }
 
@@ -19,7 +19,7 @@ $selectors: "column", "col";
         overflow: auto;
         width: 100%;
         @include screenSize(mobile) {
-          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
+          width: calc(calc(#{$columnSize}/ #{$ui_columnTopLimit}) * 100%);
         }
       }
     }
@@ -30,7 +30,7 @@ $selectors: "column", "col";
         overflow: auto;
         width: 100%;
         @include screenSize(tabletAndDesktop) {
-          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
+          width: calc(calc(#{$columnSize}/ #{$ui_columnTopLimit}) * 100%);
         }
       }
     }
@@ -41,7 +41,7 @@ $selectors: "column", "col";
         overflow: auto;
         width: 100%;
         @include screenSize(desktop) {
-          width: calc(calc(#{$columnSize}/ $ui_columnTopLimit) * 100%);
+          width: calc(calc(#{$columnSize}/ #{$ui_columnTopLimit}) * 100%);
         }
       }
     }
