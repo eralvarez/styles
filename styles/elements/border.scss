@@ -42,6 +42,12 @@ $selectors: "border", "b";
   &-r {
     border-radius: $ui_borderRadius;
 
+    @for $borderSize from $ui_borderRadiusBottomLimit through $ui_borderRadiusTopLimit {
+      &-#{$borderSize} {
+        border-radius: calc(#{$borderSize} * 1px);
+      }
+    }
+
     @each $borderRadiusSide in $borderRadiusSides {
       @for $borderSize from $ui_borderRadiusBottomLimit through $ui_borderRadiusTopLimit {
         &-#{$borderRadiusSide}-#{$borderSize} {
