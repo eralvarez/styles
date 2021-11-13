@@ -8,7 +8,7 @@ The minified compiled output is a `~14mb` file. Loading the full `styles.css` or
 
 [![npm version](https://badge.fury.io/js/ztyle.svg)](https://badge.fury.io/js/ztyle)
 
-## Documentation
+## Docs
 
 [Documentation available here](https://github.com/eralvarez/ztyle/blob/master/docs/README.md)
 
