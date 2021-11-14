@@ -1,6 +1,7 @@
 $ui_colorSchemas: "", "light", "dark";
 $ui_devices: "mobile", "tablet", "desktop";
 $colors: (
+  "white": $ui_colorWhite,
   "primary": $ui_colorPrimary,
   "secondary": $ui_colorSecondary,
   "success": $ui_colorSuccess,
