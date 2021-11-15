@@ -3,52 +3,52 @@
 $selectors: "margin", "m";
 @include colorSchemeAndDevice($selectors) {
   &-no {
-    margin: 0px;
+    margin: 0px !important;
   }
 
   &-x-no {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
   }
 
   &-y-no {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   @for $space from $ui_marginSizeBottomLimit through $ui_marginSizeTopLimit {
     &-#{$space} {
-      margin: #{$space}px;
+      margin: #{$space}px !important;
     }
 
     &-top-#{$space},
     &-t-#{$space} {
-      margin-top: #{$space}px;
+      margin-top: #{$space}px !important;
     }
 
     &-right-#{$space},
     &-r-#{$space} {
-      margin-right: #{$space}px;
+      margin-right: #{$space}px !important;
     }
 
     &-bottom-#{$space},
     &-b-#{$space} {
-      margin-bottom: #{$space}px;
+      margin-bottom: #{$space}px !important;
     }
 
     &-left-#{$space},
     &-l-#{$space} {
-      margin-left: #{$space}px;
+      margin-left: #{$space}px !important;
     }
 
     &-x-#{$space} {
-      margin-right: #{$space}px;
-      margin-left: #{$space}px;
+      margin-right: #{$space}px !important;
+      margin-left: #{$space}px !important;
     }
 
     &-y-#{$space} {
-      margin-top: #{$space}px;
-      margin-bottom: #{$space}px;
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
     }
   }
 }
@@ -71,37 +71,37 @@ $selectors: "padding", "p";
 
   @for $space from $ui_paddingSizeBottomLimit through $ui_paddingSizeTopLimit {
     &-#{$space} {
-      padding: #{$space}px;
+      padding: #{$space}px !important;
     }
 
     &-top-#{$space},
     &-t-#{$space} {
-      padding-top: #{$space}px;
+      padding-top: #{$space}px !important;
     }
 
     &-right-#{$space},
     &-r-#{$space} {
-      padding-right: #{$space}px;
+      padding-right: #{$space}px !important;
     }
 
     &-bottom-#{$space},
     &-b-#{$space} {
-      padding-bottom: #{$space}px;
+      padding-bottom: #{$space}px !important;
     }
 
     &-left-#{$space},
     &-l-#{$space} {
-      padding-left: #{$space}px;
+      padding-left: #{$space}px !important;
     }
 
     &-x-#{$space} {
-      padding-right: #{$space}px;
-      padding-left: #{$space}px;
+      padding-right: #{$space}px !important;
+      padding-left: #{$space}px !important;
     }
 
     &-y-#{$space} {
-      padding-top: #{$space}px;
-      padding-bottom: #{$space}px;
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
     }
   }
 }

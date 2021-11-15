@@ -1,0 +1,18 @@
+@import "../helpers/color-scheme-and-device.scss";
+
+$outlineStyles: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden;
+$selectors: "outline";
+
+
+@include colorSchemeAndDevice($selectors) {
+  &-no,
+  &-0 {
+    outline: none;
+  }
+
+  @each $outlineStyle in $outlineStyles {
+    &-#{$outlineStyle} {
+      outline: $outlineStyle;
+    }
+  }
+}
